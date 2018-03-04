@@ -35,13 +35,21 @@ ubuntu-update.sh does not require any special installation.
 
 Either copy the repository from github or simply copy the file.
 
-To make a local copy, run:
+To make a local copy of the git repo, run:
 
 ```
 git clone git@github.com:TedLeRoy/ubuntu-update.sh.git
 ```
 
 in the directory where you want to make the git clone.
+
+To copy the file directly, type:
+
+```
+wget https://github.com/TedLeRoy/ubuntu-update.sh/archive/master.zip
+```
+
+being in the directory where you want the file downloaded, they type unzip master.zip to extract the files.
 
 ## Usage 
 
