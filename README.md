@@ -49,7 +49,7 @@ To copy the file directly, type:
 wget https://github.com/TedLeRoy/ubuntu-update.sh/archive/master.zip
 ```
 
-being in the directory where you want the file downloaded, they type unzip master.zip to extract the files.
+being in the directory where you want the file downloaded, they type `unzip master.zip` to extract the files.
 
 ## Usage 
 
