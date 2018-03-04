@@ -8,6 +8,8 @@ echo -e "under certain conditions."
 echo -e "Again, see  https://github.com/TedLeRoy/ubuntu-update.sh/blob/master/LICENSE.md"
 echo -e "for details.\e[0m"
 
+# The -e "\32m...\e[0m" code is to display output in color.
+
 echo ""
 echo ""
 echo -e "\e[32m#############################"
