@@ -84,8 +84,14 @@ This project is licensed under the GNU General Public License - see the [LICENSE
 Here is what a sample run of the script looks like:
 
 ```
-Laptop:~/git/update/ubuntu-update.sh$ sudo ./update.sh
-[sudo] password for user:
+user@pop-os:~/git/update/ubuntu-update.sh$ sudo ./update.sh
+ubuntu-update.sh Copyright (C) 2018 Ted LeRoy
+This program comes with ABSOLUTELY NO WARRANTY' see
+https://github.com/TedLeRoy/ubuntu-update.sh/blob/master/LICENSE.md
+This is free software, and you are welcome to redistribute it
+under certain conditions.
+Again, see  https://github.com/TedLeRoy/ubuntu-update.sh/blob/master/LICENSE.md
+for details.
 
 
 #############################
@@ -94,16 +100,16 @@ Laptop:~/git/update/ubuntu-update.sh$ sudo ./update.sh
 
 
 Hit:1 http://us.archive.ubuntu.com/ubuntu artful InRelease
-Ign:2 http://dl.google.com/linux/chrome/deb stable InRelease
+Get:2 http://us.archive.ubuntu.com/ubuntu artful-updates InRelease [78.6 kB]
 Hit:3 http://security.ubuntu.com/ubuntu artful-security InRelease
-Get:4 http://us.archive.ubuntu.com/ubuntu artful-updates InRelease [78.6 kB]
-Hit:5 http://ppa.launchpad.net/plt/racket/ubuntu artful InRelease
+Hit:4 http://ppa.launchpad.net/plt/racket/ubuntu artful InRelease
+Ign:5 http://dl.google.com/linux/chrome/deb stable InRelease
 Hit:6 http://dl.google.com/linux/chrome/deb stable Release
 Hit:7 http://us.archive.ubuntu.com/ubuntu artful-backports InRelease
-Hit:8 http://ppa.launchpad.net/system76-dev/stable/ubuntu artful InRelease
+Hit:9 http://ppa.launchpad.net/system76-dev/stable/ubuntu artful InRelease
 Hit:10 http://ppa.launchpad.net/system76/pop/ubuntu artful InRelease
 Hit:11 http://ppa.launchpad.net/webupd8team/atom/ubuntu artful InRelease
-Fetched 78.6 kB in 1s (48.6 kB/s)
+Fetched 78.6 kB in 2s (31.0 kB/s)
 Reading package lists... Done
 Building dependency tree
 Reading state information... Done
@@ -112,8 +118,6 @@ Reading package lists... Done
 Building dependency tree
 Reading state information... Done
 Calculating upgrade... Done
-APT(8)                                       APT                                      APT(8)
-
 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 
 
@@ -137,6 +141,7 @@ Calculating upgrade... Done
 #############################
 #  Operating System Updated #
 #############################
+
 
 
 ```
