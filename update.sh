@@ -1,5 +1,13 @@
 #!/bin/bash
 
+echo "ubuntu-update.sh Copyright (C) 2018 Ted LeRoy"
+echo "This program comes with ABSOLUTELY NO WARRANTY' see "
+echo " https://github.com/TedLeRoy/ubuntu-update.sh/blob/master/LICENSE.md"
+echo "This is free software, and you are welcome to redistribute it"
+echo "under certain conditions."
+echo "Again, see  https://github.com/TedLeRoy/ubuntu-update.sh/blob/master/LICENSE.md"
+echo "for details."
+
 echo ""
 echo ""
 echo "#############################"
