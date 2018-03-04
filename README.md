@@ -141,7 +141,9 @@ Calculating upgrade... Done
 
 ```
 
-This was run on an up to date installation of [POP!_OS](https://system76.com/pop) an Ubuntu derivative maintained by [System76](https://system76.com/).
+This was run on an up to date installation of [POP!_OS](https://system76.com/pop) an [Ubuntu](https://www.ubuntu.com/desktop) derivative maintained by [System76](https://system76.com/).
 
-Here's a screenshot of that run: 
-![screenshot of ubuntu-update.sh run](https://image.ibb.co/hTXNa7/ubuntu_update_sh_sample_run.png)
+Here are screenshots of a run:
+
+![Screenshot 1 of ubuntu-update.sh run](https://image.ibb.co/iGWqCn/ubuntu_update_sh_run_1.png)
+![Screenshot 2 of ubuntu-update.sh run](https://image.ibb.co/hhOgJS/ubuntu_update_sh_run_2.png)
