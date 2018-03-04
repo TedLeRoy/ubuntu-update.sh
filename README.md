@@ -19,19 +19,37 @@ sudo chmod +x ubuntu-update.sh
 
 Being in the directory where the file resides when you run the comand.
 
+### Warning
+
+Be sure you have read and understand what this file does before running it.
+
+You can read the man page for each command to see what it does.
+
+Any time the creator of a script says it has to be run with sudo permissions or as root, use caution.
+
+*This script has to be run with sudo because apt commands must be run as root.*
+
 ### Installing
 
 ubuntu-update.sh does not require any special installation.
 
 Either copy the repository from github or simply copy the file.
 
+To make a local copy, run:
+
+```
+git clone git@github.com:TedLeRoy/ubuntu-update.sh.git
+```
+
+in the directory where you want to make the git clone.
+
 ## Usage 
 
 ```
-sudo ./<path/to/file/ubuntu-update.sh>
+sudo ./<path/to/file/>ubuntu-update.sh
 ```
 
-Output will be the normal output to std-out of an update an up grade, then a full-upgrade.
+Output will be the normal output to std-out of an update and upgrade, then a full-upgrade (formerly called a dist-upgrade with apt-get).
 
 ### Messages
 
@@ -43,7 +61,7 @@ Look for messages recommending a reboot or recomending you run sudo apt auto-rem
 
 ## Built With
 
-bash script using apt package manager on Ubuntu 16.04 LTS
+bash script using apt on Ubuntu 16.04 LTS.
 
 ## License
 
