@@ -38,7 +38,7 @@ Either copy the repository from github or simply copy the file.
 To make a local copy of the git repo, run:
 
 ```
-git clone git@github.com:TedLeRoy/ubuntu-update.sh.git
+git clone https://github.com/TedLeRoy/ubuntu-update.sh.git
 ```
 
 in the directory where you want to make the git clone.
