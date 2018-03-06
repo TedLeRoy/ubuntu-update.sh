@@ -59,6 +59,8 @@ sudo ./<path/to/file/>ubuntu-update.sh
 
 Output will be the normal output to std-out of an update and upgrade, then a full-upgrade (formerly called a dist-upgrade with apt-get).
 
+A video showing a sample run can be found at https://youtu.be/HCWUGxYAqjY
+
 ### Messages
 
 Look for messages recommending a reboot or recomending you run sudo apt auto-remove to clean up unneeded files.
