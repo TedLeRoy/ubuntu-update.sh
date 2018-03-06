@@ -22,7 +22,7 @@ echo -e "#     Updating Data Base    #"
 echo -e "#############################\e[0m"
 echo ""
 echo ""
-apt update | tee /tmp/update-output.txt
+apt-get update | tee /tmp/update-output.txt
 echo ""
 echo ""
 echo -e "\e[32m#############################"
@@ -35,7 +35,7 @@ echo -e "# Upgrading Operating System #"
 echo -e "##############################\e[0m"
 echo ""
 echo ""
-apt upgrade -y | tee -a /tmp/update-output.txt
+apt-get upgrade -y | tee -a /tmp/update-output.txt
 echo ""
 echo ""
 echo -e "\e[32m#############################"
@@ -48,7 +48,7 @@ echo -e "#  Starting Full-Upgrade    #"
 echo -e "#############################\e[0m"
 echo ""
 echo ""
-apt full-upgrade -y | tee -a /tmp/update-output.txt
+apt-get dist-upgrade -y | tee -a /tmp/update-output.txt
 echo ""
 echo ""
 echo -e "\e[32m#############################"
@@ -60,21 +60,16 @@ echo -e "\e[32m#####################################################"
 echo -e "#   Checking for actionable messages from install   #"
 echo -e "#####################################################\e[0m"
 echo ""
-echo ""
 egrep -wi --color 'warning|error|critical|reboot|restart|autoclean|autoremove' /tmp/update-output.txt
-echo ""
 echo ""
 echo -e "\e[32m#############################"
 echo -e "#    Cleaning temp files    #"
 echo -e "#############################\e[0m"
 echo ""
-echo ""
 rm /tmp/update-output.txt
-echo ""
 echo ""
 echo -e "\e[32m#############################"
 echo -e "#     Done with upgrade     #"
 echo -e "#############################\e[0m"
 echo ""
 echo ""
-
