@@ -74,7 +74,7 @@ Look for messages recommending a reboot or recomending you run sudo apt auto-rem
 If you chose to create a local git repository, you can run one command to update to the latest version available.
 
 ```
-git pull
+git fetch
 ```
 
 If you downloaded the file, you'll have to download again after each update.
