@@ -63,7 +63,7 @@ A video showing a sample run can be found at https://youtu.be/HCWUGxYAqjY
 
 It is recommended that you run this script interactively instead of calling it with another script or process. You may be prompted for input for things like GRUB updates, or which version of a file to keep. This will hang the script unless you provide input.
 
-Although these prompts could be overridden with the --noninteractive option, simply responding to the prompts provides greater control.
+Although these prompts could be overridden with `export DEBIAN_FRONTEND=noninteractive`, responding to the prompts provides greater control.
 
 ### Messages
 
