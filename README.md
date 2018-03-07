@@ -69,6 +69,16 @@ Although these prompts could be overridden with the --noninteractive option, sim
 
 Look for messages recommending a reboot or recomending you run sudo apt auto-remove to clean up unneeded files.
 
+### Updates
+
+If you chose to create a local git repository, you can run one command to update to the latest version available.
+
+```
+git pull
+```
+
+If you downloaded the file, you'll have to download again after each update.
+
 ## Author
 
 * **Ted LeRoy** - *Initial work* - [ubuntu-update.sh](https://github.com/TedLeRoy/ubuntu-update.sh)
