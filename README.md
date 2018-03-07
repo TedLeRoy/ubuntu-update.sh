@@ -59,6 +59,12 @@ sudo ./<path/to/file/>ubuntu-update.sh
 
 Output will be the normal output to std-out of an update and upgrade, then a full-upgrade (formerly called a dist-upgrade with apt-get).
 
+A video showing a sample run can be found at https://youtu.be/HCWUGxYAqjY
+
+It is recommended that you run this script interactively instead of calling it with another script or process. You may be prompted for input for things like GRUB updates, or which version of a file to keep. This will hang the script unless you provide input.
+
+Although these prompts could be overridden with the --noninteractive option, simply responding to the prompts provides greater control.
+
 ### Messages
 
 Look for messages recommending a reboot or recomending you run sudo apt auto-remove to clean up unneeded files.
