@@ -50,7 +50,7 @@ echo -e "\e[32m#####################################################"
 echo -e "#   Checking for actionable messages from install   #"
 echo -e "#####################################################\e[0m"
 echo ""
-egrep -wi --color 'warning|error|critical|reboot|restart|autoclean|autoremove' /tmp/update-output.txt
+egrep -wi --color 'warning|error|critical|reboot|restart|autoclean|autoremove' /tmp/update-output.txt | sort -u
 echo ""
 echo -e "\e[32m#############################"
 echo -e "#    Cleaning temp files    #"
