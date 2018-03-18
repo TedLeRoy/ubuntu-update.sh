@@ -43,6 +43,19 @@ echo -e "
 #   Full Upgrade Complete   #
 #############################\e[0m
 "
+echo -e "
+\e[32m#############################
+#    Starting Autoremove    #
+#############################\e[0m
+"
+
+apt-get autoremove | tee -a /tmp/update-output.txt
+
+echo -e "
+\e[32m#############################
+#    Autoremove Complete    #
+#############################\e[0m
+"
 
 echo -e "
 \e[32m#####################################################
