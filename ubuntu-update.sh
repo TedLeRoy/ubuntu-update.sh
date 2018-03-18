@@ -3,63 +3,65 @@
 # Simple bash script to updte Ubuntu Linux
 # Run ./ubuntu-update.sh with sudo privileges
 
-echo ""
-echo ""
-echo -e "\e[31mubuntu-update.sh Copyright (C) 2018 Ted LeRoy"
-echo -e "This program comes with ABSOLUTELY NO WARRANTY see "
-echo -e "https://github.com/TedLeRoy/ubuntu-update.sh/blob/master/LICENSE.md"
-echo -e "This is free software, and you are welcome to redistribute it"
-echo -e "under certain conditions."
-echo -e "Again, see  https://github.com/TedLeRoy/ubuntu-update.sh/blob/master/LICENSE.md"
-echo -e "for details.\e[0m"
-echo ""
+# [NOTE] The -e "\32m...\e[0m" code is to display output in color.
 
-# The -e "\32m...\e[0m" code is to display output in color.
+echo -e "
+\e[31mubuntu-update.sh Copyright (C) 2018 Ted LeRoy
+This program comes with ABSOLUTELY NO WARRANTY see 
+https://github.com/TedLeRoy/ubuntu-update.sh/blob/master/LICENSE.md
+This is free software, and you are welcome to redistribute it
+under certain conditions.
+Again, see  https://github.com/TedLeRoy/ubuntu-update.sh/blob/master/LICENSE.md
+for details.\e[0m"
 
-echo ""
-echo -e "\e[32m#############################"
-echo -e "#     Updating Data Base    #"
-echo -e "#############################\e[0m"
-echo ""
-echo ""
+echo -e "
+\e[32m#############################
+#     Updating Data Base    #
+#############################\e[0m
+"
+
 apt-get update | tee /tmp/update-output.txt
-echo ""
-echo ""
-echo -e "\e[32m##############################"
-echo -e "# Upgrading Operating System #"
-echo -e "##############################\e[0m"
-echo ""
-echo ""
+
+echo -e "
+\e[32m##############################
+# Upgrading Operating System #
+##############################\e[0m
+"
+
 apt-get upgrade -y | tee -a /tmp/update-output.txt
-echo ""
-echo ""
-echo -e "\e[32m#############################"
-echo -e "#  Starting Full Upgrade    #"
-echo -e "#############################\e[0m"
-echo ""
-echo ""
+
+echo -e "
+\e[32m#############################
+#  Starting Full Upgrade    #
+#############################\e[0m
+"
+
 apt-get dist-upgrade -y | tee -a /tmp/update-output.txt
-echo ""
-echo ""
-echo -e "\e[32m#############################"
-echo -e "#   Full Upgrade Complete   #"
-echo -e "#############################\e[0m"
-echo ""
-echo ""
-echo -e "\e[32m#####################################################"
-echo -e "#   Checking for actionable messages from install   #"
-echo -e "#####################################################\e[0m"
-echo ""
+
+echo -e "
+\e[32m#############################
+#   Full Upgrade Complete   #
+#############################\e[0m
+"
+
+echo -e "
+\e[32m#####################################################
+#   Checking for actionable messages from install   #
+#####################################################\e[0m
+"
+
 egrep -wi --color 'warning|error|critical|reboot|restart|autoclean|autoremove' /tmp/update-output.txt | uniq
-echo ""
-echo -e "\e[32m#############################"
-echo -e "#    Cleaning temp files    #"
-echo -e "#############################\e[0m"
-echo ""
+
+echo -e "
+\e[32m#############################
+#    Cleaning temp files    #
+#############################\e[0m
+"
+
 rm /tmp/update-output.txt
-echo ""
-echo -e "\e[32m#############################"
-echo -e "#     Done with upgrade     #"
-echo -e "#############################\e[0m"
-echo ""
-echo ""
+
+echo -e "
+\e[32m#############################
+#     Done with upgrade     #
+#############################\e[0m
+"
