@@ -19,6 +19,8 @@ sudo chmod +x ubuntu-update.sh
 
 Being in the directory where the file resides when you run the comand.
 
+You will not have to set the file executable if you create a local git repository and clone from Master.
+
 ### Warning
 
 Be sure you have read and understand what this file does before running it.
@@ -28,6 +30,21 @@ You can read the man page for each command to see what it does.
 Any time the creator of a script says it has to be run with sudo permissions or as root, use caution.
 
 *This script has to be run with sudo because apt commands must be run as root.*
+
+## What it does
+
+This script runs the following commands:
+
+```
+apt-get update
+apt-get upgrade -y
+apt-get dist-upgrade -y
+apt-get autoremove
+```
+
+It also writes the output to a file, /tmp/update-output.txt, and to the screen with the tee command, then uses grep to parse the update-output.txt file for information you may want to be aware of, displaying it at the end of the run.
+
+It then deletes the temp file.
 
 ### Installing
 
@@ -86,6 +103,14 @@ If you downloaded the file, you'll have to download again after each update.
 ## Built With
 
 bash script using apt on Ubuntu 16.04 LTS.
+
+## Future Improvements
+
+The following additions or features are planned:
+
+* Accept command line options to override default behavior. If the user wants to skip dist-upgrade, provide a command line option for doing so, for example.
+
+Suggestions for features are welcome.
 
 ## License
 
