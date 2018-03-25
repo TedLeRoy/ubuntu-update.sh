@@ -132,8 +132,8 @@ This project is licensed under the GNU General Public License - see the [LICENSE
 Here is what a sample run of the script looks like:
 
 ```
-theo@Ubuntu-Practice:~/my_projects/ubuntu-update.sh$ sudo ./ubuntu-update.sh
-[sudo] password for theo:
+tedl@ubuntu-16-04:~/my_projects/ubuntu-update.sh$ sudo ./ubuntu-update.sh
+[sudo] password for tedl:
 
 ubuntu-update.sh Copyright (C) 2018 Ted LeRoy
 This program comes with ABSOLUTELY NO WARRANTY see
@@ -148,15 +148,9 @@ for details.
 #############################
 
 Hit:1 http://us.archive.ubuntu.com/ubuntu xenial InRelease
-Get:2 http://us.archive.ubuntu.com/ubuntu xenial-updates InRelease [102 kB]
-Get:3 http://security.ubuntu.com/ubuntu xenial-security InRelease [102 kB]
-Get:4 http://us.archive.ubuntu.com/ubuntu xenial-backports InRelease [102 kB]
-Get:5 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [742 kB]
-Get:6 http://us.archive.ubuntu.com/ubuntu xenial-updates/main i386 Packages [689 kB]
-Get:7 http://us.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [601 kB]
-Get:8 http://us.archive.ubuntu.com/ubuntu xenial-updates/universe i386 Packages [557 kB]
-Get:9 http://us.archive.ubuntu.com/ubuntu xenial-updates/universe Translation-en [243 kB]
-Fetched 3,138 kB in 3s (810 kB/s)
+Hit:2 http://us.archive.ubuntu.com/ubuntu xenial-updates InRelease
+Hit:3 http://us.archive.ubuntu.com/ubuntu xenial-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu xenial-security InRelease
 Reading package lists...
 
 ##############################
@@ -167,42 +161,46 @@ Reading package lists...
 Building dependency tree...
 Reading state information...
 Calculating upgrade...
+The following packages have been kept back:
+  libdrm2
 The following packages will be upgraded:
-  apt apt-transport-https apt-utils libapt-inst2.0 libapt-pkg5.0
-5 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-Need to get 2,027 kB of archives.
-After this operation, 1,024 B of additional disk space will be used.
-Get:1 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libapt-pkg5.0 amd64 1.2.26 [706 kB]
-Get:2 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libapt-inst2.0 amd64 1.2.26 [55.4 kB]
-Get:3 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 apt amd64 1.2.26 [1,043 kB]
-Get:4 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 apt-utils amd64 1.2.26 [197 kB]
-Get:5 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 apt-transport-https amd64 1.2.26 [26.1 kB]
-Fetched 2,027 kB in 1s (1,670 kB/s)
-(Reading database ... 115014 files and directories currently installed.)
-Preparing to unpack .../libapt-pkg5.0_1.2.26_amd64.deb ...
-Unpacking libapt-pkg5.0:amd64 (1.2.26) over (1.2.25) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-Setting up libapt-pkg5.0:amd64 (1.2.26) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-(Reading database ... 115014 files and directories currently installed.)
-Preparing to unpack .../libapt-inst2.0_1.2.26_amd64.deb ...
-Unpacking libapt-inst2.0:amd64 (1.2.26) over (1.2.25) ...
-Preparing to unpack .../archives/apt_1.2.26_amd64.deb ...
-Unpacking apt (1.2.26) over (1.2.25) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-Processing triggers for man-db (2.7.5-1) ...
-Setting up apt (1.2.26) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-(Reading database ... 115014 files and directories currently installed.)
-Preparing to unpack .../apt-utils_1.2.26_amd64.deb ...
-Unpacking apt-utils (1.2.26) over (1.2.25) ...
-Preparing to unpack .../apt-transport-https_1.2.26_amd64.deb ...
-Unpacking apt-transport-https (1.2.26) over (1.2.25) ...
-Processing triggers for man-db (2.7.5-1) ...
-Setting up libapt-inst2.0:amd64 (1.2.26) ...
-Setting up apt-utils (1.2.26) ...
-Setting up apt-transport-https (1.2.26) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
+  apparmor apt apt-transport-https apt-utils base-files bsdutils
+  cloud-guest-utils cloud-initramfs-copymods cloud-initramfs-dyn-netconf
+  cryptsetup cryptsetup-bin distro-info-data dnsmasq-base dpkg
+  friendly-recovery grub-common grub-legacy-ec2 grub-pc grub-pc-bin
+  grub2-common initramfs-tools initramfs-tools-bin initramfs-tools-core
+  iproute2 isc-dhcp-client isc-dhcp-common klibc-utils libapparmor-perl
+  libapparmor1 libapt-inst2.0 libapt-pkg5.0 libaudit-common libaudit1
+  libblkid1 libcryptsetup4 libfdisk1 libgcrypt20 libgnutls-openssl27
+  libgnutls30 libklibc libmount1 libnuma1 libparted2 libplymouth4 libseccomp2
+  libsmartcols1 libuuid1 linux-firmware logrotate lshw lxcfs lxd lxd-client
+  mdadm mount open-vm-tools overlayroot parted plymouth
+  plymouth-theme-ubuntu-text python-apt-common python3-apt python3-distupgrade
+  resolvconf snapd sosreport squashfs-tools ubuntu-minimal
+  ubuntu-release-upgrader-core ubuntu-server ubuntu-standard
+  unattended-upgrades update-notifier-common util-linux uuid-runtime vlan
+  xfsprogs
+77 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+Need to get 79.0 MB of archives.
+After this operation, 19.8 MB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 base-files amd64 9.4ubuntu4.6 [55.0 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 bsdutils amd64 1:2.27.1-6ubuntu3.4 [51.5 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 dpkg amd64 1.18.4ubuntu1.4 [2,088 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 util-linux amd64 2.27.1-6ubuntu3.4 [849 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 mount amd64 2.27.1-6ubuntu3.4 [121 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libapt-pkg5.0 amd64 1.2.26 [706 kB]
+[Truncated for brevity...]
+Preparing to unpack .../snapd_2.29.4.2_amd64.deb ...
+Warning: Stopping snapd.service, but it can still be activated by:
+  snapd.socket
+[Truncated for brevity...]
+Unpacking grub-legacy-ec2 (17.2-35-gf576b2a2-0ubuntu1~16.04.2) over (0.7.9-153-g16a7302f-0ubuntu1~16.04.2) ...
+dpkg: warning: unable to delete old directory '/etc/kernel/kernel/postinst.d': Directory not empty
+dpkg: warning: unable to delete old directory '/etc/kernel/kernel/postrm.d': Directory not empty
+dpkg: warning: unable to delete old directory '/etc/kernel/kernel': Directory not empty
+[Truncated for brevity...]
+Processin triggers for ureadahead (0.100.0-19) ...
+Processing triggers for resolvconf (1.78ubuntu6) ...
 
 #############################
 #  Starting Full Upgrade    #
@@ -212,7 +210,26 @@ Reading package lists...
 Building dependency tree...
 Reading state information...
 Calculating upgrade...
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+The following NEW packages will be installed:
+  libdrm-common
+The following packages will be upgraded:
+  libdrm2
+1 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 35.2 kB of archives.
+After this operation, 39.9 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdrm-common all 2.4.83-1~16.04.1 [4,870 B]
+Get:2 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdrm2 amd64 2.4.83-1~16.04.1 [30.4 kB]
+Fetched 35.2 kB in 5s (6,572 B/s)
+                                 Selecting previously unselected package libdrm-common.
+(Reading database ... 91695 files and directories currently installed.)
+Preparing to unpack .../libdrm-common_2.4.83-1~16.04.1_all.deb ...
+Unpacking libdrm-common (2.4.83-1~16.04.1) ...
+Preparing to unpack .../libdrm2_2.4.83-1~16.04.1_amd64.deb ...
+Unpacking libdrm2:amd64 (2.4.83-1~16.04.1) over (2.4.76-1~ubuntu16.04.1) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Setting up libdrm-common (2.4.83-1~16.04.1) ...
+Setting up libdrm2:amd64 (2.4.83-1~16.04.1) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
 
 #############################
 #   Full Upgrade Complete   #
@@ -237,6 +254,14 @@ Reading state information...
 #   Checking for actionable messages from install   #
 #####################################################
 
+Warning: Stopping lxd.service, but it can still be activated by:
+Warning: Stopping snapd.service, but it can still be activated by:
+dpkg: warning: unable to delete old directory '/etc/kernel/kernel/postinst.d': Directory not empty
+dpkg: warning: unable to delete old directory '/etc/kernel/kernel/postrm.d': Directory not empty
+dpkg: warning: unable to delete old directory '/etc/kernel/kernel': Directory not empty
+update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
+Installation finished. No error reported.
+update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
 
 #############################
 #    Cleaning temp files    #
