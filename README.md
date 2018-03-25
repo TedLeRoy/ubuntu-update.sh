@@ -2,8 +2,7 @@
 
 A bash script to update your Ubuntu system.
 
-Set the file to executable then run it with sudo as 
-outlined below to update your Ubuntu system.
+Set the file to executable then run it with sudo as outlined below to update your Ubuntu system.
 
 This project is in GitHub and can be found [here](https://github.com/TedLeRoy/ubuntu-update.sh)
 
