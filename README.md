@@ -7,6 +7,18 @@ outlined below to update your Ubuntu system.
 
 This project is in GitHub and can be found [here](https://github.com/TedLeRoy/ubuntu-update.sh)
 
+### Background
+
+I maintain several individual Ubuntu 16.04 Long Term Support (LTS) Servers and found myself typing `sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y` often.
+
+I made a script that did this, but thought it would also be fun to make it a bit more functional and make it available to everyone.
+
+So here it is! 
+
+### Who This Is For
+
+If, like me, you maintain several Ubuntu Linux systems, and you find yourself typing `sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y`, this script is for you!
+
 ### Prerequisites
 
 You must have sudo permissions to run this script.
@@ -116,7 +128,7 @@ Look for messages recommending a reboot or providing other warnings you may want
 
 Here are a few common issues you may encounter and how to resolve them.
 
-1. Forgetting to type sudo before the script name.
+**1. Forgetting to type sudo before the script name.**
 
 If you forget to type sudo before the script name, you'll get output like the following: 
 
@@ -131,7 +143,7 @@ W: Problem unlinking the file /var/cache/apt/srcpkgcache.bin - RemoveCaches (13:
 
 Notice the statements like `Operation not permitted` and `Permission denied`. These indicate an issue with the permissions used while running. It must be run with sudo.
 
-2. A collision of updates.
+**2. A collision of updates.**
 
 By default, Ubuntu 16.04 Server will install security updates automatically.
 
@@ -144,10 +156,9 @@ E: Unable to lock the administration directory (/var/lib/dpkg/), is another proc
 
 If this happens, just wait and try again later.
 
-
 ### Updates
 
-This project will go through some iterations as I think of things I'd like to add. You'll want to keep your script up to date.
+This project will go through some iterations as I think of things I'd like to add, or add features based on feature requests. You'll want to keep your script up to date.
 
 If you chose to create a local git repository, you can run one command to update to the latest version available.
 
