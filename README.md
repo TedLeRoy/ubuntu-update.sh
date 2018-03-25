@@ -47,7 +47,7 @@ You can read the man page for each command and option to see what it does.
 
 Any time the creator of a script says it has to be run with sudo permissions or as root, inderstand why and use caution.
 
-**This script has to be run with sudo because the apt-get commands it uses must be run as root.**
+***This script has to be run with sudo because the apt-get commands it uses must be run as root.***
 
 To understand `getopts`, you can type `help getopts` or just search the web for more info.
 
