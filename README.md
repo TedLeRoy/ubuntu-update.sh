@@ -198,6 +198,7 @@ This project is licensed under the GNU General Public License - see the [LICENSE
 ### Acknowledgements
 
 * Creators and maintainers of apt
+* The Free and Open Source Software (FOSS) community and people on the Internet at large who provide their solutions to problems like this.
 
 ### Sample run
 
