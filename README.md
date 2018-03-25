@@ -5,7 +5,9 @@ A bash script to update your Ubuntu system.
 Set the file to executable then run it with sudo as 
 outlined below to update your Ubuntu system.
 
-## Prerequisites
+This project is in GitHub and can be found [here](https://github.com/TedLeRoy/ubuntu-update.sh)
+
+### Prerequisites
 
 You must have sudo permissions to run this script.
 
@@ -17,11 +19,11 @@ Set it so it is executable using the command:
 sudo chmod +x ubuntu-update.sh
 ```
 
-Being in the directory where the file resides when you run the command.
+being in the directory where the file resides when you run the command.
 
-You will not have to set the file executable if you create a local git repository and clone from Master.
+You will not have to set the file executable if you create a local *git* repository and clone from Master.
 
-## Warning
+### Warning
 
 Be sure you have read and understand what this file does before running it.
 
@@ -29,9 +31,9 @@ You can read the man page for each command and option to see what it does.
 
 Any time the creator of a script says it has to be run with sudo permissions or as root, inderstand why and use caution.
 
-*This script has to be run with sudo because the apt-get commands it uses must be run as root.*
+**This script has to be run with sudo because the apt-get commands it uses must be run as root.**
 
-## What it does
+### What It Does
 
 This script runs the following commands:
 
@@ -46,11 +48,11 @@ It also writes the output to a file, /tmp/update-output.txt, and to the screen w
 
 It then deletes the /tmp/update-output.txt file that was created.
 
-## Installing
+### Installing
 
 ubuntu-update.sh does not require any special installation.
 
-Either copy the repository from github or simply copy the file using the download option from the green "Clone or download" link in the upper right of the github page.
+Either copy the repository from [GitHub](https://github.com/TedLeRoy/ubuntu-update.sh) or simply copy the file using the download option from the green "Clone or download" link in the upper right of the github page.
 
 To make a local copy of the git repo, run:
 
@@ -68,7 +70,7 @@ wget https://github.com/TedLeRoy/ubuntu-update.sh/archive/master.zip
 
 being in the directory where you want the file downloaded, then type `unzip master.zip` to extract the files.
 
-## Usage 
+### Usage 
 
 Just run as shown:
 
@@ -106,11 +108,46 @@ Although these prompts could be overridden with `export DEBIAN_FRONTEND=noninter
 
 The script will also parse the output attempting to display lines that may require your attention at the end of the run, looking for words like *warning* and *reboot*.
 
-## Messages
+### Messages
 
 Look for messages recommending a reboot or providing other warnings you may want to check out. These should be displayed at the end of the run but it may not catch all items of interest.
 
-## Updates
+### Troubleshooting
+
+Here are a few common issues you may encounter and how to resolve them.
+
+1. Forgetting to type sudo before the script name.
+
+If you forget to type sudo before the script name, you'll get output like the following: 
+
+```
+Reading package lists...
+W: chmod 0700 of directory /var/lib/apt/lists/partial failed - SetupAPTPartialDirectory (1: Operation not permitted)
+E: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
+E: Unable to lock directory /var/lib/apt/lists/
+W: Problem unlinking the file /var/cache/apt/pkgcache.bin - RemoveCaches (13: Permission denied)
+W: Problem unlinking the file /var/cache/apt/srcpkgcache.bin - RemoveCaches (13: Permission denied)
+```
+
+Notice the statements like `Operation not permitted` and `Permission denied`. These indicate an issue with the permissions used while running. It must be run with sudo.
+
+2. A collision of updates.
+
+By default, Ubuntu 16.04 Server will install security updates automatically.
+
+If another update is already running, you'll see output like the following:
+
+```
+E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)
+E: Unable to lock the administration directory (/var/lib/dpkg/), is another process using it?
+```
+
+If this happens, just wait and try again later.
+
+
+### Updates
+
+This project will go through some iterations as I think of things I'd like to add. You'll want to keep your script up to date.
 
 If you chose to create a local git repository, you can run one command to update to the latest version available.
 
@@ -120,32 +157,32 @@ git fetch
 
 If you downloaded the file, you'll have to download again after each update.
 
-## Author
+### Author
 
 * **Ted LeRoy** - *Initial work* - [ubuntu-update.sh](https://github.com/TedLeRoy/ubuntu-update.sh)
 
-## Built With
+### Built With
 
 bash script using apt on Ubuntu 16.04 LTS.
 
-## Future Improvements
+### Future Improvements
 
 The following additions or features are planned:
 
-~~* Accept command line options to override default behavior. If the user wants to skip dist-upgrade, provide a command line option for doing so, for example.~~ [Done] - See [Issue-1](https://github.com/TedLeRoy/ubuntu-update.sh/issues/1)
+* ~~Accept command line options to override default behavior. If the user wants to skip dist-upgrade, provide a command line option for doing so, for example.~~ [Done] - See [Issue-1](https://github.com/TedLeRoy/ubuntu-update.sh/issues/1)
 * Implement versioning so people will know when there has been an update.
 
 Suggestions for features are welcome.
 
-## License
+### License
 
 This project is licensed under the GNU General Public License - see the [LICENSE.md](LICENSE.md) file for details.
 
-## Acknowledgements
+### Acknowledgements
 
 * Creators and maintainers of apt
 
-## Sample run
+### Sample run
 
 Here is what a sample run of the script looks like:
 
