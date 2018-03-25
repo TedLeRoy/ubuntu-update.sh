@@ -84,7 +84,7 @@ sudo ./ubuntu-update.sh
 
 being in the directory where ubuntu-update.sh resides.
 
-You may choose to skip certain commands by specifying an option at the command line.
+You may choose to skip certain commands by specifying one or more options at the command line.
 
 ```
 Usage: sudo bash ubuntu-update.sh [-ugdrh]
