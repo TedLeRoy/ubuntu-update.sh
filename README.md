@@ -1,11 +1,11 @@
 # ubuntu-update.sh
 
-A super simple bash script to update your Ubuntu system.
+A bash script to update your Ubuntu system.
 
 Set the file to executable then run it with sudo as 
 outlined below to update your Ubuntu system.
 
-### Prerequisites
+## Prerequisites
 
 You must have sudo permissions to run this script.
 
@@ -17,17 +17,17 @@ Set it so it is executable using the command:
 sudo chmod +x ubuntu-update.sh
 ```
 
-Being in the directory where the file resides when you run the comand.
+Being in the directory where the file resides when you run the command.
 
 You will not have to set the file executable if you create a local git repository and clone from Master.
 
-### Warning
+## Warning
 
 Be sure you have read and understand what this file does before running it.
 
 You can read the man page for each command and option to see what it does.
 
-Any time the creator of a script says it has to be run with sudo permissions or as root, use caution.
+Any time the creator of a script says it has to be run with sudo permissions or as root, inderstand why and use caution.
 
 *This script has to be run with sudo because the apt-get commands it uses must be run as root.*
 
@@ -46,7 +46,7 @@ It also writes the output to a file, /tmp/update-output.txt, and to the screen w
 
 It then deletes the /tmp/update-output.txt file that was created.
 
-### Installing
+## Installing
 
 ubuntu-update.sh does not require any special installation.
 
@@ -73,12 +73,30 @@ being in the directory where you want the file downloaded, then type `unzip mast
 Just run as shown:
 
 ```
+sudo bash ubuntu-update.sh
+```
+
+or
+
+```
 sudo ./ubuntu-update.sh
 ```
 
 being in the directory where ubuntu-update.sh resides.
 
-Output will be the normal output to std-out of running apt-get update, upgrade, dist-upgrade, and autoremove.
+You may choose to skip certain commands by specifying an option at the command line.
+
+```
+Usage: sudo bash ubuntu-update.sh [-ugdrh]
+       No option - Run all options (recommended)
+       -u Don't run apt-get update
+       -g Don't run apt-get upgrade -y
+       -d Don't run apt-get dist-upgrade -y
+       -r Don't run apt-get auto-remove
+       -h Display Usage and exit
+```
+
+Output will be the normal output to std-out of running the apt-get update, upgrade, dist-upgrade, and autoremove commands.
 
 A video showing a sample run can be found at https://youtu.be/HCWUGxYAqjY
 
@@ -86,13 +104,13 @@ It is recommended that you run this script interactively instead of calling it w
 
 Although these prompts could be overridden with `export DEBIAN_FRONTEND=noninteractive`, responding to the prompts provides greater control.
 
-The script will also parse the output attempting to display output that may require your attention at the end of the run, looking for words like *warning* and *reboot*.
+The script will also parse the output attempting to display lines that may require your attention at the end of the run, looking for words like *warning* and *reboot*.
 
-### Messages
+## Messages
 
 Look for messages recommending a reboot or providing other warnings you may want to check out. These should be displayed at the end of the run but it may not catch all items of interest.
 
-### Updates
+## Updates
 
 If you chose to create a local git repository, you can run one command to update to the latest version available.
 
@@ -114,7 +132,7 @@ bash script using apt on Ubuntu 16.04 LTS.
 
 The following additions or features are planned:
 
-* Accept command line options to override default behavior. If the user wants to skip dist-upgrade, provide a command line option for doing so, for example.
+~~* Accept command line options to override default behavior. If the user wants to skip dist-upgrade, provide a command line option for doing so, for example.~~ [Done] - See [Issue-1](https://github.com/TedLeRoy/ubuntu-update.sh/issues/1)
 * Implement versioning so people will know when there has been an update.
 
 Suggestions for features are welcome.
@@ -132,8 +150,8 @@ This project is licensed under the GNU General Public License - see the [LICENSE
 Here is what a sample run of the script looks like:
 
 ```
-tedl@ubuntu-16-04:~/my_projects/ubuntu-update.sh$ sudo ./ubuntu-update.sh
-[sudo] password for tedl:
+sudo ./ubuntu-update.sh
+[sudo] password for user:
 
 ubuntu-update.sh Copyright (C) 2018 Ted LeRoy
 This program comes with ABSOLUTELY NO WARRANTY see
