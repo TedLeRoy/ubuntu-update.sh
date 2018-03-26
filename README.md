@@ -202,7 +202,7 @@ The following additions or features are planned:
 * ~~Accept command line options to override default behavior. If the user wants to skip dist-upgrade, provide a command line option for doing so, for example.~~ [Done] - See [Issue-1](https://github.com/TedLeRoy/ubuntu-update.sh/issues/1)
 * ~~Implement versioning so people will know when there has been an update.~~ [Done] - Version 1.0 released on 16 May 2018.
 
-Suggestions for features are welcome, provided they are in alignment with the [Project Goals](###Project Goals).
+Suggestions for features are welcome, provided they are in alignment with the [Project Goals](#Project-Goals).
 
 ### License
 
