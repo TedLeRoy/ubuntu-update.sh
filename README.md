@@ -16,11 +16,13 @@ Also, I noticed that when these commands are run together, the output can get qu
 
 This script puts clear banners at the beginning of each activity and parses output in an attempt to present items of interest like warnings or reboot messages at the end of the output.
 
-So here it is! 
-
 ### Who This Is For
 
 If, like me, you maintain several Ubuntu Linux systems, and you find yourself typing `sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y`, this script is for you!
+
+If you maintain a large Ubuntu Server infrastructure, you likely have a patch management system, so this probably isn't for you.
+
+You could, however, scavenge some useful features like using `getopts` to accept command line arguments for your other scripts!
 
 ### Prerequisites
 
@@ -67,6 +69,9 @@ It also writes the output to a file, /tmp/update-output.txt, and to the screen w
 
 It then deletes the /tmp/update-output.txt file that was created.
 
+I chose to use apt-get instead of apt commands because apt-get provides more stable and reliab
+le output than apt which makes it more script friendly.
+
 ### Installing
 
 ubuntu-update.sh does not require any special installation.
@@ -76,10 +81,10 @@ Either copy the repository from [GitHub](https://github.com/TedLeRoy/ubuntu-upda
 To make a local copy of the git repo, run:
 
 ```
+cd <directory where you want to create your git clone>
+git init
 git clone https://github.com/TedLeRoy/ubuntu-update.sh.git
 ```
-
-in the directory where you want to make the git clone.
 
 To copy the file directly, type:
 
@@ -106,6 +111,8 @@ sudo ./ubuntu-update.sh
 being in the directory where ubuntu-update.sh resides.
 
 You may choose to skip certain commands by specifying one or more options at the command line.
+
+Available options are as follows:
 
 ```
 Usage: sudo bash ubuntu-update.sh [-ugdrh]
@@ -173,6 +180,8 @@ If you chose to create a local git repository, you can run one command to update
 git fetch
 ```
 
+from the directory where you created your git clone.
+
 If you downloaded the file, you'll have to download again after each update.
 
 ### Author
@@ -188,7 +197,7 @@ bash script using apt on Ubuntu 16.04 LTS.
 The following additions or features are planned:
 
 * ~~Accept command line options to override default behavior. If the user wants to skip dist-upgrade, provide a command line option for doing so, for example.~~ [Done] - See [Issue-1](https://github.com/TedLeRoy/ubuntu-update.sh/issues/1)
-* Implement versioning so people will know when there has been an update.
+* ~~Implement versioning so people will know when there has been an update.~~ [Done] - Version 1.0 released on 16 May 2018.
 
 Suggestions for features are welcome.
 
@@ -199,7 +208,7 @@ This project is licensed under the GNU General Public License - see the [LICENSE
 ### Acknowledgements
 
 * Creators and maintainers of apt
-* The Free and Open Source Software (FOSS) community and people on the Internet at large who provide their solutions to problems like this.
+* The Free and Open Source Software (FOSS) community and people on the Internet at large who provide their solutions to problems like this. This is really a Frankenscript of the work of many who created scripts or tutorials with features I was hunting for.
 
 ### Sample run
 
