@@ -213,6 +213,7 @@ This project is licensed under the GNU General Public License - see the [LICENSE
 * Creators and maintainers of apt
 * The Free and Open Source Software (FOSS) community and people on the Internet at large who provide their solutions to problems like this. This is really a Frankenscript of the work of many who created scripts or tutorials with features I was hunting for.
 * Shouts out to [LinuxConfig.org](https://linuxconfig.org/how-to-use-getopts-to-parse-a-script-options) and [Kevin Sookocheff](https://sookocheff.com/post/bash/parsing-bash-script-arguments-with-shopts/) for their tutorials that helped me learn and integrate `getopts` into the script.
+* Shout out to [kph](https://twitter.com/hashtag/whereiskurt) for suggesting `getopts`.
 
 ### Sample run
 
