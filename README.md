@@ -16,7 +16,7 @@ Also, I noticed that when these commands are run together, the output can get qu
 
 This script puts clear banners at the beginning of each activity and parses output in an attempt to present items of interest like warnings or reboot messages at the end of the output.
 
-### Goals
+### [Project Goals](#project-goals)
 
 The goal of this project is to provide an easy to use, single command to automate the tasks routinely undertaken to update an Ubuntu system, and to provide the messages that require further action or inquiry at the end of the run.
 
@@ -202,7 +202,7 @@ The following additions or features are planned:
 * ~~Accept command line options to override default behavior. If the user wants to skip dist-upgrade, provide a command line option for doing so, for example.~~ [Done] - See [Issue-1](https://github.com/TedLeRoy/ubuntu-update.sh/issues/1)
 * ~~Implement versioning so people will know when there has been an update.~~ [Done] - Version 1.0 released on 16 May 2018.
 
-Suggestions for features are welcome, provided they are in alignment with the [Project Goals](#Goals) above.
+Suggestions for features are welcome, provided they are in alignment with the [Project Goals](#project-goals) above.
 
 ### License
 
