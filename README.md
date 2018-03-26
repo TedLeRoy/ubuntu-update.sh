@@ -69,8 +69,7 @@ It also writes the output to a file, /tmp/update-output.txt, and to the screen w
 
 It then deletes the /tmp/update-output.txt file that was created.
 
-I chose to use apt-get instead of apt commands because apt-get provides more stable and reliab
-le output than apt which makes it more script friendly.
+I chose to use apt-get instead of apt commands because apt-get provides more stable and reliable output than apt which makes it more script friendly.
 
 ### Installing
 
