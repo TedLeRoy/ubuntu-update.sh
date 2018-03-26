@@ -12,7 +12,7 @@ I maintain several individual Ubuntu 16.04 Long Term Support (LTS) Servers and f
 
 I made a script that did this, but thought it would also be fun to make it a bit more functional and make it available to everyone.
 
-Also, I noticed that when run together, the output can get quite lengthy, and there's no clear separation between the parts running, so I'd have to scroll back up through the output to see whether there was any output requiring action.
+Also, I noticed that when these commands are run together, the output can get quite lengthy, and there's no clear separation between the parts running, so I'd have to scroll back up through the output to see whether there was any output requiring action.
 
 This script puts clear banners at the beginning of each activity and parses output in an attempt to present items of interest like warnings or reboot messages at the end of the output.
 
@@ -49,6 +49,8 @@ Any time the creator of a script says it has to be run with sudo permissions or 
 ***This script has to be run with sudo because the apt-get commands it uses must be run as root.***
 
 To understand `getopts`, you can type `help getopts` or just search the web for more info.
+
+The other commands used are fairly straight forward.
 
 ### What It Does
 
