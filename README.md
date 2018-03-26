@@ -180,7 +180,7 @@ This project will go through some iterations as I think of things I'd like to ad
 If you chose to create a local git repository, you can run one command to update to the latest version available.
 
 ```
-git fetch
+git pull
 ```
 
 from the directory where you created your git clone.
