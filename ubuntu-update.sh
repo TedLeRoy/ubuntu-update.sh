@@ -96,13 +96,13 @@ fi
 if [[ ! -n $rOff ]]; then
     echo -e "
 \e[32m############################
-#    Starting Autoremove   #
+#    Starting Apt Clean    #
 ############################\e[0m
 "
-apt-get auto-remove | tee -a /tmp/update-output.txt
+apt-get clean | tee -a /tmp/update-output.txt
 echo -e "
 \e[32m#############################
-#    Autoremove Complete    #
+#     Apt Clean Complete    #
 #############################\e[0m
 "
 fi

@@ -66,7 +66,7 @@ This script runs the following commands:
 apt-get update
 apt-get upgrade -y
 apt-get dist-upgrade -y
-apt-get autoremove
+apt-get clean
 ```
 
 It also writes the output to a file, /tmp/update-output.txt, and to the screen with the tee command, then uses grep to parse the update-output.txt file for information you may want to be aware of, displaying any found at the end of the run.
