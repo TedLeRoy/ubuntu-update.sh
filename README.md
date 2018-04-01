@@ -147,7 +147,7 @@ Here are a few common issues you may encounter and how to resolve them.
 
 **1. Forgetting to type sudo before the script name.**
 
-If you forget to type sudo before the script name, you'll get output like the following: 
+~~~If you forget to type sudo before the script name, you'll get output like the following:~~~ 
 
 ```
 Reading package lists...
@@ -158,7 +158,9 @@ W: Problem unlinking the file /var/cache/apt/pkgcache.bin - RemoveCaches (13: Pe
 W: Problem unlinking the file /var/cache/apt/srcpkgcache.bin - RemoveCaches (13: Permission denied)
 ```
 
-Notice the statements like `Operation not permitted` and `Permission denied`. These indicate an issue with the permissions used while running. It must be run with sudo.
+~~~Notice the statements like `Operation not permitted` and `Permission denied`. These indicate an issue with the permissions used while running. It must be run with sudo.~~~
+
+A pre-flight check has now been built in to check for this. The script should not run if it detects that it is not being run as root or with sudo permission and exit with a warning.
 
 **2. A collision of updates.**
 
