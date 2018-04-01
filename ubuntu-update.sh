@@ -52,6 +52,13 @@ while getopts ":ugdrh" OPT; do
   esac
 done
 
+# Checking whether script is being run as root
+if [[ ${UID} != 0 ]]; then
+    echo "This script must be run as root or with sudo permissions."
+    echo "Please run using sudo."
+    exit
+fi
+
 # Executing based on option selection
 if [[ -n $hOn || $noOpt ]]; then
     echo "${red}$USAGE${normal}"
