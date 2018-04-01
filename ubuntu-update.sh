@@ -56,13 +56,13 @@ done
 if [[ ${UID} != 0 ]]; then
     echo "This script must be run as root or with sudo permissions."
     echo "Please run using sudo."
-    exit
+    exit 1
 fi
 
 # Executing based on option selection
 if [[ -n $hOn || $noOpt ]]; then
     echo "${red}$USAGE${normal}"
-    exit
+    exit 2
 fi
 
 # Display HEADER
