@@ -116,21 +116,40 @@ echo -e "
 "
 fi
 
-echo -e "
+if [ -f "/tmp/update-output.txt"  ]
+
+then
+
+  echo -e "
 \e[32m#####################################################
 #   Checking for actionable messages from install   #
 #####################################################\e[0m
 "
-egrep -wi --color 'warning|error|critical|reboot|restart|autoclean|autoremove' /tmp/update-output.txt | uniq
-echo -e "
+  egrep -wi --color 'warning|error|critical|reboot|restart|autoclean|autoremove' /tmp/update-output.txt | uniq
+  echo -e "
 \e[32m#############################
 #    Cleaning temp files    #
 #############################\e[0m
 "
 
-rm /tmp/update-output.txt
-echo -e "
+  rm /tmp/update-output.txt
+  echo -e "
 \e[32m#############################
 #     Done with upgrade     #
 #############################\e[0m
 "
+
+exit 0
+
+else
+
+  echo -e "
+\e[32m#########################################################
+# No items to check given your chosen options. Exiting. #
+#########################################################\e[0m
+"
+
+fi
+
+exit 0
+
