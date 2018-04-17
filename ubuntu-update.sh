@@ -19,12 +19,15 @@ Easily update, upgrade, and clean up your Ubuntu system with this bash script.
 
 This program comes with ABSOLUTELY NO WARRANTY see
 https://github.com/TedLeRoy/ubuntu-update.sh/blob/master/LICENSE.md
+
 This is free software, and you are welcome to redistribute it
 under certain conditions.
+
 See  https://github.com/TedLeRoy/ubuntu-update.sh/blob/master/LICENSE.md
 for details."
 
 # Defining USAGE Variable to print usage for -h or undefined args
+
 USAGE="
 Usage: sudo bash ubuntu-update.sh [-ugdrh]
        No option - Run all options (recommended)
@@ -36,6 +39,7 @@ Usage: sudo bash ubuntu-update.sh [-ugdrh]
 "
 
 # Evaluating Command Line args and setting case variables for later use
+
 while getopts ":ugdrh" OPT; do
   case ${OPT} in
     u ) uOff=1
@@ -53,6 +57,7 @@ while getopts ":ugdrh" OPT; do
 done
 
 # Checking whether script is being run as root
+
 if [[ ${UID} != 0 ]]; then
     echo "${red}
     This script must be run as root or with sudo permissions.
@@ -62,12 +67,14 @@ if [[ ${UID} != 0 ]]; then
 fi
 
 # Executing based on option selection
+
 if [[ -n $hOn || $noOpt ]]; then
     echo "${red}$USAGE${normal}"
     exit 2
 fi
 
 # Display HEADER
+
 echo "${red}$HEADER${normal}"
 
 if [[ ! -n $uOff ]]; then
@@ -116,9 +123,13 @@ echo -e "
 "
 fi
 
+# Check for existence of update-output.txt and exit if not there.
+
 if [ -f "/tmp/update-output.txt"  ]
 
 then
+
+# Search for issues user may want to see and display them at end of run.
 
   echo -e "
 \e[32m#####################################################
@@ -143,6 +154,8 @@ exit 0
 
 else
 
+# Exit with message if update-output.txt file is not there.
+
   echo -e "
 \e[32m#########################################################
 # No items to check given your chosen options. Exiting. #
@@ -152,4 +165,3 @@ else
 fi
 
 exit 0
-
