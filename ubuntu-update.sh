@@ -23,7 +23,7 @@ https://github.com/TedLeRoy/ubuntu-update.sh/blob/master/LICENSE.md
 This is free software, and you are welcome to redistribute it
 under certain conditions.
 
-See  https://github.com/TedLeRoy/ubuntu-update.sh/blob/master/LICENSE.md
+See https://github.com/TedLeRoy/ubuntu-update.sh/blob/master/LICENSE.md
 for details."
 
 # Defining USAGE Variable to print usage for -h or undefined args
