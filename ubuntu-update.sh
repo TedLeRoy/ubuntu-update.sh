@@ -97,9 +97,9 @@ fi
 
 if [[ ! -n $dOff ]]; then
     echo -e "
-\e[32m############################
-#  Starting Full Upgrade   #
-############################\e[0m
+\e[32m#############################
+#   Starting Full Upgrade   #
+#############################\e[0m
 "
 apt-get dist-upgrade -y | tee -a /tmp/update-output.txt
 echo -e "
@@ -111,9 +111,9 @@ fi
 
 if [[ ! -n $rOff ]]; then
     echo -e "
-\e[32m############################
-#    Starting Apt Clean    #
-############################\e[0m
+\e[32m#############################
+#    Starting Apt Clean     #
+#############################\e[0m
 "
 apt-get clean | tee -a /tmp/update-output.txt
 echo -e "
