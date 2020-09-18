@@ -6,6 +6,8 @@ Set the file to executable then run it with sudo as outlined below to update you
 
 This project is in GitHub and can be found [here](https://github.com/TedLeRoy/ubuntu-update.sh)
 
+Similar results can be obtained by simply running `sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y` so this is as much an exercise in simple bash scripting concepts as anything.
+
 ### Background
 
 I maintain several individual Ubuntu 16.04 Long Term Support (LTS) Servers and found myself typing `sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y` often.
